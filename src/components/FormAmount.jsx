@@ -10,10 +10,9 @@ function FormAmount({ onChange }) {
   return (
     <form onChange={handleSelectChange}>
       <div className="Currency-form">
-        <label>Amount to Convert</label>
+        <h3>Amount to Convert</h3>
         <input
           type="number"
-          // i give up on regex, this is the best i can do
           pattern="[0-9]"
           placeholder="Enter amount to convert"
         ></input>

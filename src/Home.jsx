@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./Home.css";
 import Dropdown from "./components/Dropdown.jsx";
 import FormAmount from "./components/FormAmount.jsx";
@@ -14,28 +13,26 @@ function Home() {
 
   return (
     <div className="Home">
-      <img src={logo} className="Home-logo" alt="logo" />
       <div className="Home-body">
         <div>
           <FormAmount onChange={handleFormAmountChange}></FormAmount>
         </div>
         <div className="Dropdowns-container">
           <div className="Dropdown">
-            <a>From:</a>
+            <h3>From:</h3>
             <Dropdown onSelect={handleBaseDropdownSelect}></Dropdown>
           </div>
           <div className="Dropdown">
-            <a>To:</a>
+            <h3>To:</h3>
             <Dropdown onSelect={handleConvertDropdownSelect}></Dropdown>
           </div>
         </div>
-        <a className="Input">
+        <a>
           {inputValue !== 0 ? `${value} ${transferCurrency}` : ""}
         </a>
       </div>
     </div>
   );
-  // make an api call to convert USD to Chinese Yen
   async function convertUSD(value) {
     var requestURL =
       `https://v6.exchangerate-api.com/v6/347f7ad551cab73486725c31/pair/${baseCurrency}/${transferCurrency}/${value}`

@@ -6,15 +6,9 @@
 }
 
 .Currency-form input {
-  margin-top: 1rem;
   min-width: 30%;
   min-height: 2rem;
   font-size: large;
   text-align: center;
   border-radius: 1rem;
-}
-
-.Currency-form label {
-  font-family: monospace;
-  text-decoration: underline;
 }
